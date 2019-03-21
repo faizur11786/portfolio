@@ -168,11 +168,9 @@ nav{
     position: absolute;
     top: 20%;
     right: 50px;
-    // 
     ul{
         li{
             margin: 50px 0px;
-            // padding: 10px;
             width: 70px;
             height: 30px;
             text-align: center;
@@ -180,6 +178,7 @@ nav{
             top: 0;
             left: 0;
             cursor: pointer;
+            overflow: hidden;
             border-bottom: 1px solid #47478f;
             &:nth-child(2){
                 width: 90px;
@@ -250,6 +249,7 @@ nav{
                     }
                     &:nth-child(2){
                         opacity: 0;
+                        left: 20px;
                     }
                     
                 }

@@ -225,6 +225,7 @@ nav ul li {
   top: 0;
   left: 0;
   cursor: pointer;
+  overflow: hidden;
   border-bottom: 1px solid #47478f;
 }
 
@@ -320,6 +321,7 @@ nav ul li a span:nth-child(1):hover {
 
 nav ul li a span:nth-child(2) {
   opacity: 0;
+  left: 20px;
 }
 
 .banner_box {
