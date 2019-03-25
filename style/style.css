@@ -2,7 +2,9 @@
 body {
   padding: 0;
   margin: 0;
-  background: #ffffff;
+  background: #eeeeee;
+  background-image: url(../img/bg.jpg);
+  background-size: cover;
 }
 
 * {
@@ -28,6 +30,58 @@ header {
   float: left;
 }
 
+header::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 40%;
+  height: 60vh;
+  -webkit-animation: bg_ani 10s linear infinite;
+          animation: bg_ani 10s linear infinite;
+  background: #66636311;
+  z-index: -5;
+}
+
+@-webkit-keyframes bg_ani {
+  0% {
+    border-radius: 20% 10% 40% 55% / 33% 54% 20% 35%;
+  }
+  25% {
+    border-radius: 28% 44% 38% 25% / 63% 34% 40% 66%;
+  }
+  50% {
+    border-radius: 20% 50% 40% 55% / 33% 54% 50% 45%;
+  }
+  75% {
+    border-radius: 28% 44% 38% 25% / 63% 34% 40% 66%;
+  }
+  100% {
+    border-radius: 20% 10% 40% 55% / 33% 54% 20% 35%;
+  }
+}
+
+@keyframes bg_ani {
+  0% {
+    border-radius: 20% 10% 40% 55% / 33% 54% 20% 35%;
+  }
+  25% {
+    border-radius: 28% 44% 38% 25% / 63% 34% 40% 66%;
+  }
+  50% {
+    border-radius: 20% 50% 40% 55% / 33% 54% 50% 45%;
+  }
+  75% {
+    border-radius: 28% 44% 38% 25% / 63% 34% 40% 66%;
+  }
+  100% {
+    border-radius: 20% 10% 40% 55% / 33% 54% 20% 35%;
+  }
+}
+
 header .brand_name {
   float: left;
 }
@@ -40,7 +94,7 @@ header .brand_name::before {
   left: 12px;
   width: 50px;
   height: 5px;
-  background: #47478f;
+  background: #0ae0ab;
   -webkit-animation: brand_line 0.5s both;
           animation: brand_line 0.5s both;
   -webkit-animation-delay: 0.5s;
@@ -72,7 +126,7 @@ header .brand_name .f {
   position: relative;
   top: 0;
   left: 0;
-  color: #47478f;
+  color: #0ae0ab;
 }
 
 header .brand_name .f .fname {
@@ -81,7 +135,7 @@ header .brand_name .f .fname {
   left: 0px;
   top: 48px;
   font-family: sans-serif;
-  color: #47478f;
+  color: #0ae0ab;
   -webkit-animation: fname 1s both;
           animation: fname 1s both;
   opacity: 0;
@@ -194,7 +248,7 @@ header .icon_box ul li::after {
           transform: translate(-50%, -50%);
   width: 0px;
   height: 0px;
-  background: #9e9846da;
+  background: #0ae0aab9;
   border-radius: 50%;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -206,7 +260,7 @@ header .icon_box ul li i {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  color: #47478f;
+  color: #ababb6;
   z-index: 1;
 }
 
@@ -226,7 +280,7 @@ nav ul li {
   left: 0;
   cursor: pointer;
   overflow: hidden;
-  border-bottom: 1px solid #47478f;
+  border-bottom: 1px solid #0ae0ab;
 }
 
 nav ul li:nth-child(2) {
@@ -246,7 +300,7 @@ nav ul li:hover::after {
   display: block;
   width: 2px;
   height: 100%;
-  background: #47478f;
+  background: #9e9846;
   -webkit-animation: menu_line 1s infinite;
           animation: menu_line 1s infinite;
 }
@@ -299,7 +353,7 @@ nav ul li:hover a span:nth-child(2) {
 }
 
 nav ul li a {
-  color: #9e9846;
+  color: #fff;
   font-size: 16px;
   font-family: sans-serif;
   text-align: center;
@@ -328,5 +382,97 @@ nav ul li a span:nth-child(2) {
   width: 100%;
   float: left;
   padding: 20px 5%;
+}
+
+.banner_box .left_box {
+  width: 50%;
+  padding: 20px;
+  float: left;
+  margin-top: 50px;
+}
+
+.banner_box .left_box .name_box {
+  color: white;
+  font-family: sans-serif;
+}
+
+.banner_box .left_box .name_box span {
+  color: #d1d0d0;
+  font-size: 14px;
+}
+
+.banner_box .left_box .name_box h1 {
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 4rem;
+}
+
+.banner_box .left_box .name_box h1 span {
+  color: #9e9846;
+  font-size: 4rem;
+}
+
+.banner_box .left_box .name_box h1::after {
+  content: '';
+  display: block;
+  position: relative;
+  width: 60%;
+  height: 1px;
+  background: #0AE0AB;
+}
+
+.banner_box .right-box {
+  width: 50%;
+  padding: 20px;
+  float: left;
+}
+
+.banner_box .right-box .profile__box {
+  float: left;
+  padding: 20px;
+  width: 80%;
+  position: relative;
+}
+
+.banner_box .right-box .profile__box::after {
+  content: '';
+  display: block;
+  width: 88%;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 1px solid rgba(52, 187, 187, 0.479);
+  z-index: -9;
+}
+
+.banner_box .right-box .profile__box p {
+  color: #adadad;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  padding: 10px;
+  font-size: 14px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.banner_box .right-box .profile__box p:hover::before {
+  width: 30px;
+}
+
+.banner_box .right-box .profile__box p::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  border-top: 1px solid springgreen;
+  float: left;
+  margin-top: 8px;
+  margin-right: 20px;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
 }
 /*# sourceMappingURL=style.css.map */

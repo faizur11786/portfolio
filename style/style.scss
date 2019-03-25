@@ -3,7 +3,9 @@
 body{
     padding: 0;
     margin: 0;
-    background: #ffffff;
+    background: #eeeeee;
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
 }
 *{
     box-sizing: border-box;
@@ -23,8 +25,38 @@ ul{
 header{
     width: 100%;
     padding: 10px 5%;
-    
     float: left;
+    &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 40%;
+        height: 60vh;
+        animation: bg_ani 10s linear infinite;
+        background: #66636311;
+        z-index: -5;
+        
+        @keyframes bg_ani {
+            0%{
+                border-radius: 20% 10% 40% 55% / 33% 54% 20% 35%;
+            }
+            25%{
+                border-radius: 28% 44% 38% 25% / 63% 34% 40% 66%;
+            }
+            50%{
+                border-radius: 20% 50% 40% 55% / 33% 54% 50% 45%;
+            }
+            75%{
+                border-radius: 28% 44% 38% 25% / 63% 34% 40% 66%;
+            }
+            100%{
+                border-radius: 20% 10% 40% 55% / 33% 54% 20% 35%;
+            }
+        }
+    }
     .brand_name{
         float: left;
         &::before{
@@ -35,7 +67,7 @@ header{
             left: 12px;
             width: 50px;
             height: 5px;
-            background: #47478f;
+            background: #0ae0ab;
             animation: brand_line 0.5s both;
             animation-delay: 0.5s;
             @keyframes brand_line {
@@ -54,14 +86,14 @@ header{
             position: relative;
             top: 0;
             left: 0;
-            color: #47478f;
+            color: #0ae0ab;
             .fname{
                 position: absolute;
                 font-size: 20px;
                 left: 0px;
                 top: 48px;
                 font-family: sans-serif;
-                color: #47478f;
+                color: #0ae0ab;
                 animation: fname 1s both;
                 opacity: 0;
                 animation-delay: 1s;
@@ -147,7 +179,7 @@ header{
                     transform: translate(-50%, -50%);
                     width: 0px;
                     height: 0px;
-                    background: #9e9846da;
+                    background: #0ae0aab9;
                     border-radius: 50%;
                     transition: all 0.2s ease;
                     
@@ -157,7 +189,7 @@ header{
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
-                    color: #47478f;
+                    color: #ababb6;
                     z-index: 1;
                 }
             }
@@ -179,7 +211,7 @@ nav{
             left: 0;
             cursor: pointer;
             overflow: hidden;
-            border-bottom: 1px solid #47478f;
+            border-bottom: 1px solid #0ae0ab;
             &:nth-child(2){
                 width: 90px;
             }
@@ -193,7 +225,7 @@ nav{
                     display: block;
                     width: 2px;
                     height: 100%;
-                    background: #47478f;
+                    background: #9e9846;
                     animation: menu_line 1s infinite;
                     @keyframes menu_line {
                         0%{
@@ -230,7 +262,7 @@ nav{
                
             }
             a{
-                color: #9e9846;
+                color: #fff;
                 font-size: 16px;
                 font-family: sans-serif;
                 text-align: center;
@@ -264,4 +296,92 @@ nav{
     float: left;
     
     padding: 20px 5%;
+    .left_box{
+        width: 50%;
+        padding: 20px;
+        
+        float: left;
+        margin-top: 50px;
+        .name_box{
+            color: rgb(255, 255, 255);
+            font-family: sans-serif;
+            span{
+                color: #d1d0d0;
+                font-size: 14px;
+                // float: left;
+                
+            }
+            h1{
+                padding: 0;
+                margin: 0;
+                text-transform: uppercase;
+                font-size: 4rem;
+                span{
+                    color: #9e9846;
+                    font-size: 4rem;
+                }
+                &::after{
+                    content: '';
+                    display: block;
+                    position: relative;
+                    width: 60%;
+                    height: 1px;
+                    background: #0AE0AB;
+                }
+            }
+        }
+        
+    }
+    .right-box{
+        width: 50%;
+        padding: 20px;
+        
+        float: left;
+        .profile__box{
+            float: left;
+            padding: 20px;
+            width: 80%;
+            position: relative;
+            &::after{
+                content: '';
+                display: block;
+                width: 88%;
+                height: 100px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                border: 1px solid rgba(52, 187, 187, 0.479);
+                z-index: -9;
+            }
+            p{
+                color: rgb(173, 173, 173);
+                padding: 0;
+                margin: 0;
+                font-family: sans-serif;
+                padding: 10px;
+                font-size: 14px;
+                position: relative;
+                top: 0;
+                left: 0;
+                &:hover{
+                    &::before{
+                        width: 30px;
+                    }
+                }
+                &::before{
+                    content: '';
+                    display: block;
+                    width: 40px;
+                    height: 1px;
+                    border-top: 1px solid springgreen;
+                    // background: #0AE0AB;
+                    float: left;
+                    margin-top: 8px;
+                    margin-right: 20px;
+                    transition: 0.5s all;
+                }
+                
+            }
+        }
+    }
 }
