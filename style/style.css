@@ -5,6 +5,32 @@ body {
   background: #eeeeee;
   background-image: url(../img/bg.jpg);
   background-size: cover;
+  -webkit-animation: bg-change 2s both;
+          animation: bg-change 2s both;
+}
+
+@-webkit-keyframes bg-change {
+  0% {
+    background-image: url(../img/bg.jpg);
+  }
+  90% {
+    background-image: url(../img/bg.jpg);
+  }
+  100% {
+    background-image: url(../img/bg2.jpg);
+  }
+}
+
+@keyframes bg-change {
+  0% {
+    background-image: url(../img/bg.jpg);
+  }
+  90% {
+    background-image: url(../img/bg.jpg);
+  }
+  100% {
+    background-image: url(../img/bg2.jpg);
+  }
 }
 
 * {
@@ -577,10 +603,284 @@ nav ul li a span:nth-child(2) {
   cursor: crosshair;
 }
 
+.banner_box .right-box .skill_box span {
+  float: left;
+  color: #9e9846;
+  font-size: 25px;
+  margin-top: 12px;
+}
+
+.b_aroww {
+  border: 1px solid #616161;
+  width: 40px;
+  height: 40px;
+  float: left;
+  position: relative;
+  top: -80px;
+  left: 10px;
+  border-radius: 50%;
+  background: rgba(82, 85, 84, 0.205);
+}
+
+.b_aroww::before {
+  content: "1";
+  font-family: arial;
+  font-size: 20px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  color: #868383;
+  text-align: center;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.b_aroww:hover::before {
+  color: #9e9846;
+}
+
+.b_aroww svg {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 footer {
   width: 100%;
-  padding: 20px;
-  border: 1px solid red;
   float: left;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+footer .line_box {
+  position: relative;
+  left: 10%;
+  width: 60px;
+  height: 30px;
+  background: rgba(72, 73, 73, 0.247);
+  float: left;
+  padding: 0 10px;
+  cursor: e-resize;
+}
+
+footer .line_box span {
+  width: 4px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  height: 20px;
+  background: #0AE0AB;
+  float: left;
+  margin: 0 3px;
+  position: relative;
+  top: 10px;
+}
+
+footer .line_box span:nth-child(1) {
+  height: 0px;
+  -webkit-animation: one 1s infinite;
+          animation: one 1s infinite;
+}
+
+@-webkit-keyframes one {
+  0% {
+    height: 0px;
+    top: 30px;
+  }
+  25% {
+    height: 20px;
+    top: 10px;
+  }
+  50% {
+    height: 0px;
+    top: 30px;
+  }
+  75% {
+    height: 20px;
+    top: 10px;
+  }
+  100% {
+    height: 1px;
+    top: 30px;
+  }
+}
+
+@keyframes one {
+  0% {
+    height: 0px;
+    top: 30px;
+  }
+  25% {
+    height: 20px;
+    top: 10px;
+  }
+  50% {
+    height: 0px;
+    top: 30px;
+  }
+  75% {
+    height: 20px;
+    top: 10px;
+  }
+  100% {
+    height: 1px;
+    top: 30px;
+  }
+}
+
+footer .line_box span:nth-child(2) {
+  -webkit-animation: two 2s infinite;
+          animation: two 2s infinite;
+}
+
+@-webkit-keyframes two {
+  0% {
+    height: 0;
+    top: 30px;
+  }
+  25% {
+    height: 20;
+    top: 10px;
+  }
+  50% {
+    height: 0;
+    top: 30px;
+  }
+  75% {
+    height: 20;
+    top: 10px;
+  }
+  25% {
+    height: 0;
+    top: 30px;
+  }
+}
+
+@keyframes two {
+  0% {
+    height: 0;
+    top: 30px;
+  }
+  25% {
+    height: 20;
+    top: 10px;
+  }
+  50% {
+    height: 0;
+    top: 30px;
+  }
+  75% {
+    height: 20;
+    top: 10px;
+  }
+  25% {
+    height: 0;
+    top: 30px;
+  }
+}
+
+footer .line_box span:nth-child(3) {
+  background: #9e9846;
+  -webkit-animation: three 2s infinite;
+          animation: three 2s infinite;
+}
+
+@-webkit-keyframes three {
+  0% {
+    height: 0px;
+    top: 30px;
+  }
+  25% {
+    height: 20px;
+    top: 10px;
+  }
+  50% {
+    height: 0px;
+    top: 30px;
+  }
+  75% {
+    height: 20px;
+    top: 10px;
+  }
+  100% {
+    height: 1px;
+    top: 30px;
+  }
+}
+
+@keyframes three {
+  0% {
+    height: 0px;
+    top: 30px;
+  }
+  25% {
+    height: 20px;
+    top: 10px;
+  }
+  50% {
+    height: 0px;
+    top: 30px;
+  }
+  75% {
+    height: 20px;
+    top: 10px;
+  }
+  100% {
+    height: 1px;
+    top: 30px;
+  }
+}
+
+footer .line_box span:nth-child(4) {
+  -webkit-animation: four 2s infinite;
+          animation: four 2s infinite;
+}
+
+@-webkit-keyframes four {
+  0% {
+    height: 0;
+    top: 30px;
+  }
+  25% {
+    height: 20;
+    top: 10px;
+  }
+  50% {
+    height: 0;
+    top: 30px;
+  }
+  75% {
+    height: 20px;
+    top: 10px;
+  }
+  25% {
+    height: 0;
+    top: 30px;
+  }
+}
+
+@keyframes four {
+  0% {
+    height: 0;
+    top: 30px;
+  }
+  25% {
+    height: 20;
+    top: 10px;
+  }
+  50% {
+    height: 0;
+    top: 30px;
+  }
+  75% {
+    height: 20px;
+    top: 10px;
+  }
+  25% {
+    height: 0;
+    top: 30px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
