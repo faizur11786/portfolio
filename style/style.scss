@@ -78,13 +78,14 @@ header{
             width: 50px;
             height: 5px;
             background: #0ae0ab;
-            animation: brand_line 0.5s both;
+            animation: brand_line 1s infinite;
             animation-delay: 0.5s;
             @keyframes brand_line {
                 0%{
                     width: 0;
                 }
                 100%{
+                    border-radius: 10px;
                     width: 50px;
                 }
             }
@@ -356,6 +357,7 @@ nav{
                 margin: 0;
                 text-align: center;
                 font-size: 12px;
+                
                 &::before{
                     content: '';
                     display: block;
@@ -372,6 +374,8 @@ nav{
                 &:hover{
                     color: #fff;
                     border: 2px solid #0AE0AB;
+                    top: 45px;
+                    box-shadow: 1px 7px 8px #0ae0aa4d;
                     &::before{
                         z-index: -1;
                         width: 102%;
@@ -400,7 +404,7 @@ nav{
                 position: absolute;
                 top: 0;
                 right: 0;
-                border: 1px solid rgba(52, 187, 187, 0.479);
+                border-left: 1px solid rgba(52, 187, 187, 0.479);
                 z-index: -9;
             }
             p{
@@ -433,14 +437,52 @@ nav{
                 
             }
         }
+        .skill_box{
+            width: 80%;
+            padding: 10px;
+            border: 1px solid rgb(66, 66, 66);
+            float: left;
+            margin-top: 50px;
+            font-family: sans-serif;
+            
+            h3{
+                padding: 0;
+                margin: 0;
+                color: #dadae0;
+                font-weight: normal;
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+            p{
+                float: left;
+                padding: 10px;
+                margin: 5px;
+                color: #0ae0ab;
+                border: 1px solid rgb(82, 81, 81);
+                text-transform: uppercase;
+                font-size: 12px;
+                border-radius: 40px;
+                cursor: crosshair;
+                
+            }
+        }
     }
 }
+
+// .aroww{
+//     border: 1px solid rgb(97, 97, 97);
+//     width: 40px;
+//     height: 40px;
+//     float: left;
+//     // position: fixed;
+//     // bottom: 120px;
+//     // left: 100px;
+//     border-radius: 50%;
+// }
 
 footer{
     width: 100%;
     padding: 20px;
     border: 1px solid red;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    float: left;
 }
